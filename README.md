@@ -1,0 +1,1 @@
+Basic app for storing recipes.
