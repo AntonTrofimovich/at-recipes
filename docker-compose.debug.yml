@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  frontend:
+    image: node:12-alpine
+    command: sh -c "npm i && npm start"
+    ports:
+      - 4200:4200
+    working_dir: /frontend
+    volumes:
+      - ./frontend/:/frontend
+
+  backend:
+    image: node:12-alpine
+    command: sh -c "npm i && npm start"
+    ports:
+      - 3000:3000
+    working_dir: /backend
+    volumes:
+      - ./backend/:/backend
+
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: recipes
