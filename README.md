@@ -1,5 +1,5 @@
 ### Download
-This repository contains two subrepos - backend and frontend which are being linked to at-recipes-front and at-recipes-back. To see all the sourcecode in one place the command `git clone --recursive` should be invoked.
+This repo should be cloned with command `git clone --recursive`. This will allow to clone data into backend and frontend subrepos too.
 
 ### Launch
 Steps to launch the app:
