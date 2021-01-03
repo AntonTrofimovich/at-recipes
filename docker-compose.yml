@@ -5,11 +5,15 @@ services:
     image: antontrofimovich/at-recipes-front
     ports:
       - 4200:4200
+    depends_on: 
+      - backend
 
   backend:
     image: antontrofimovich/at-recipes-back
     ports:
       - 3000:3000
+    depends_on: 
+      - db
 
   db:
     image: postgres:latest
